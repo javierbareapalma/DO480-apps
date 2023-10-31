@@ -1,0 +1,11 @@
+kind: Kustomization
+resources:
+- ../../base
+- route-prod.yaml
+
+nameSuffix: -prod
+
+images:
+- name: mysql
+  newName: registry.redhat.io/rhel8/mysql-80
+  newTag: 1-156
